@@ -5,6 +5,15 @@ Hitron Hub 5, Sagem FAST 5657, FAST 5670, FAST 3896-15, Strong GN630VE e Askey T
 
 ## Correr
 
+### Windows: duplo clique
+
+Faz duplo clique em `iniciar.cmd` para abrir o dashboard no browser predefinido.
+Não precisa de Python nem de instalar dependências. Se descarregares o ZIP do
+GitHub, extrai primeiro a pasta completa; mantém o `iniciar.cmd` junto do `index.html`.
+Este modo é local e não inicia um servidor nem disponibiliza o dashboard na rede.
+
+### Servidor HTTP (opcional, para acesso pela rede)
+
 ```powershell
 python serve.py          # porta 13002 (0.0.0.0 → também 127.0.0.1 / localhost / IP da máquina)
 python serve.py 13099    # outra porta
@@ -29,6 +38,7 @@ python gen.py
 | Ficheiro | Descrição |
 |---|---|
 | `index.html` | Dashboard |
+| `iniciar.cmd` | Lançador Windows por duplo clique, sem dependências |
 | `serve.py` | Servidor HTTP (serve só o `index.html`) |
 | `gen.py` | Gerador a partir dos manifestos |
 | `base_models.json` | Metadados e descrições base do Hub 5 e FAST 5657 |
